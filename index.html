@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EES Schedule â€“ Week of May 25, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f4f8; color: #222; }
+  .header { background: #1a237e; color: white; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .header h1 { font-size: 20px; font-weight: 600; }
+  .header .timestamp { font-size: 12px; opacity: 0.8; }
+  .legend { display: flex; gap: 16px; padding: 12px 24px; background: white; border-bottom: 1px solid #ddd; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+  .grid { display: grid; grid-template-columns: 160px repeat(6, 1fr); border-left: 1px solid #ddd; margin: 0; }
+  .col-header { background: #e8eaf6; font-size: 13px; font-weight: 700; padding: 10px 8px; text-align: center; border-right: 1px solid #ddd; border-bottom: 2px solid #9fa8da; color: #1a237e; }
+  .col-header.today { background: #1a237e; color: white; }
+  .col-header.tech-label { text-align: left; background: #f5f5f5; color: #555; font-weight: 600; font-size: 12px; }
+  .row { display: contents; }
+  .cell { border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; padding: 6px; background: white; vertical-align: top; min-height: 80px; }
+  .cell.today { background: #f0f4ff; border-right: 2px solid #3f51b5; }
+  .cell.tech-name { background: #fafafa; font-weight: 600; font-size: 13px; color: #1a237e; display: flex; align-items: flex-start; padding: 10px 8px; border-right: 2px solid #9fa8da; }
+  .cell.empty { background: #fafafa; }
+  .block { border-radius: 4px; padding: 5px 7px; margin-bottom: 5px; font-size: 11px; line-height: 1.4; }
+  .block-type { font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.3px; }
+  .block-time { color: #444; font-size: 10.5px; margin-top: 2px; }
+  .block-ref { color: #666; font-size: 10px; font-family: monospace; }
+  .block-client { font-weight: 600; color: #333; font-size: 11px; }
+  .block-site { color: #555; font-size: 10.5px; }
+  .block-loc { color: #888; font-size: 10px; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Eastern Electric Solutions â€” Week of May 25, 2026</h1>
+  <div class="timestamp">Updated: Wednesday, May 27, 2026 at 08:16 PM</div>
+</div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#e3f2fd;border:2px solid #1565c0"></div> Job</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fce4ec;border:2px solid #e91e63"></div> Public Holiday</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ffebee;border:2px solid #c62828"></div> Unpaid Time Off</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#fff8e1;border:2px solid #f9a825"></div> Warehouse</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ede7f6;border:2px solid #6a1b9a"></div> Meeting</div>
+</div>
+<div class="grid">
+
+<div class="col-header tech-label">Technician</div>
+<div class="col-header">Mon 5/25</div>
+<div class="col-header">Tue 5/26</div>
+<div class="col-header today">Wed 5/27</div>
+<div class="col-header">Thu 5/28</div>
+<div class="col-header">Fri 5/29</div>
+<div class="col-header">Sat 5/30</div>
+<div class="cell tech-name">Alex Skony</div>
+<div class="cell">
+<div class="block" style="background:#fce4ec;border-left:4px solid #e91e63">
+<div class="block-type">Public Holiday</div>
+<div class="block-time">07:30 AM to 03:30 PM (8.00 hrs)</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">08:00 AM to 09:00 AM (1.00 hrs)</div>
+<div class="block-ref">669-9863</div>
+<div class="block-client">Carbo Management</div>
+<div class="block-site">Weatherman Res</div>
+<div class="block-loc">Delray Beach</div>
+</div>
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">09:00 AM to 04:00 PM (7.00 hrs)</div>
+<div class="block-ref">669-9863</div>
+<div class="block-client">Carbo Management</div>
+<div class="block-site">Weatherman Res</div>
+<div class="block-loc">Delray Beach</div>
+</div>
+</div>
+<div class="cell today">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 11:30 AM (4.00 hrs)</div>
+<div class="block-ref">672-9867</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Donovan Res.</div>
+<div class="block-loc">North Palm Beach</div>
+</div>
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">11:30 AM to 03:30 PM (4.00 hrs)</div>
+<div class="block-ref">672-9869</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Donovan Res.</div>
+<div class="block-loc">North Palm Beach</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">08:00 AM to 12:00 PM (4.00 hrs)</div>
+<div class="block-ref">678-9876</div>
+<div class="block-client">MCM Estate Services</div>
+<div class="block-site">Christopher's home</div>
+<div class="block-loc">Stuart</div>
+</div>
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">12:00 PM to 04:00 PM (4.00 hrs)</div>
+<div class="block-ref">672-9867</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Donovan Res.</div>
+<div class="block-loc">North Palm Beach</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">08:00 AM to 12:00 PM (4.00 hrs)</div>
+<div class="block-ref">669-9863</div>
+<div class="block-client">Carbo Management</div>
+<div class="block-site">Weatherman Res</div>
+<div class="block-loc">Delray Beach</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#ffebee;border-left:4px solid #c62828">
+<div class="block-type">Unpaid Time Off</div>
+<div class="block-time">07:30 AM to 05:30 PM (10.00 hrs)</div>
+</div>
+</div>
+<div class="cell tech-name">Boris Kozlowskiy</div>
+<div class="cell">
+<div class="block" style="background:#fce4ec;border-left:4px solid #e91e63">
+<div class="block-type">Public Holiday</div>
+<div class="block-time">07:45 AM to 03:45 PM (8.00 hrs)</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">08:00 AM to 04:00 PM (8.00 hrs)</div>
+<div class="block-ref">669-9863</div>
+<div class="block-client">Carbo Management</div>
+<div class="block-site">Weatherman Res</div>
+<div class="block-loc">Delray Beach</div>
+</div>
+</div>
+<div class="cell today">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 03:30 PM (8.00 hrs)</div>
+<div class="block-ref">240-275</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Owen Residence</div>
+<div class="block-loc">North Palm Beach</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">08:00 AM to 12:00 PM (4.00 hrs)</div>
+<div class="block-ref">678-9876</div>
+<div class="block-client">MCM Estate Services</div>
+<div class="block-site">Christopher's home</div>
+<div class="block-loc">Stuart</div>
+</div>
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">12:00 PM to 04:00 PM (4.00 hrs)</div>
+<div class="block-ref">672-9867</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Donovan Res.</div>
+<div class="block-loc">North Palm Beach</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">08:00 AM to 12:00 PM (4.00 hrs)</div>
+<div class="block-ref">669-9863</div>
+<div class="block-client">Carbo Management</div>
+<div class="block-site">Weatherman Res</div>
+<div class="block-loc">Delray Beach</div>
+</div>
+</div>
+<div class="cell empty"></div>
+<div class="cell tech-name">Ethan Almeida</div>
+<div class="cell">
+<div class="block" style="background:#fce4ec;border-left:4px solid #e91e63">
+<div class="block-type">Public Holiday</div>
+<div class="block-time">07:30 AM to 03:30 PM (8.00 hrs)</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">08:15 AM to 01:30 PM (5.25 hrs)</div>
+<div class="block-ref">668-9858</div>
+<div class="block-client">Abide Contracting</div>
+<div class="block-site">Tonken Res.</div>
+<div class="block-loc">Palm Beach Gardens</div>
+</div>
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">01:30 PM to 05:00 PM (3.50 hrs)</div>
+<div class="block-ref">668-9860</div>
+<div class="block-client">Abide Contracting</div>
+<div class="block-site">Tonken Res.</div>
+<div class="block-loc">Palm Beach Gardens</div>
+</div>
+</div>
+<div class="cell today">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:00 AM to 08:00 AM (1.00 hrs)</div>
+<div class="block-ref">668-9858</div>
+<div class="block-client">Abide Contracting</div>
+<div class="block-site">Tonken Res.</div>
+<div class="block-loc">Palm Beach Gardens</div>
+</div>
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">08:00 AM to 04:00 PM (8.00 hrs)</div>
+<div class="block-ref">672-9867</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Donovan Res.</div>
+<div class="block-loc">North Palm Beach</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 03:30 PM (8.00 hrs)</div>
+<div class="block-ref">668-9858</div>
+<div class="block-client">Abide Contracting</div>
+<div class="block-site">Tonken Res.</div>
+<div class="block-loc">Palm Beach Gardens</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 11:30 AM (4.00 hrs)</div>
+<div class="block-ref">668-9858</div>
+<div class="block-client">Abide Contracting</div>
+<div class="block-site">Tonken Res.</div>
+<div cla™ÍÌô‰‰±½¬µ±½ŒˆùA…±´	•… …É‘•¹Ìð½‘¥Øø(ð½‘¥Øø(ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°•µÁÑäˆøð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°Ñ• µ¹…µ”ˆù5…É½Ì½ÌM…¹Ñ½Ìð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°ˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬ˆÍÑå±”ô‰‰…­É½Õ¹è™”Ñ•Œí‰½É‘•Èµ±•™ÐèÑÁàÍ½±¥€”äÅ”ØÌˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑåÁ”ˆùAÕ‰±¥Œ!½±¥‘…äð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑ¥µ”ˆøÀÜèÌÀ4Ñ¼€ÀÌèÌÀA4€ à¸ÀÀ¡ÉÌ¤ð½‘¥Øø(ð½‘¥Øø(ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°ˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬ˆÍÑå±”ô‰‰…­É½Õ¹è”Í˜É™í‰½É‘•Èµ±•™ÐèÑÁàÍ½±¥€ŒÄÔØÕŒÀˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑåÁ”ˆù)½ˆð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑ¥µ”ˆøÀÜèÌÀ4Ñ¼€ÀÌèÌÀA4€ à¸ÀÀ¡ÉÌ¤ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÉ•˜ˆøØÜÐ´äàÜÄð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±¥•¹Ðˆù5¥É…±”5¥±”A±…é„ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÍ¥Ñ”ˆøØÈØ€ÈÅÍÐMÑÉ••ÐY•É¼	•… ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±½ŒˆùY•É¼	•… ð½‘¥Øø(ð½‘¥Øø(ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°Ñ½‘…äˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬ˆÍÑå±”ô‰‰…­É½Õ¹è”Í˜É™í‰½É‘•Èµ±•™ÐèÑÁàÍ½±¥€ŒÄÔØÕŒÀˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑåÁ”ˆù)½ˆð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑ¥µ”ˆøÀÜèÌÀ4Ñ¼€ÀÌèÌÀA4€ à¸ÀÀ¡ÉÌ¤ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÉ•˜ˆøØÜÐ´äàÜÄð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±¥•¹Ðˆù5¥É…±”5¥±”A±…é„ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÍ¥Ñ”ˆøØÈØ€ÈÅÍÐMÑÉ••ÐY•É¼	•… ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±½ŒˆùY•É¼	•… ð½‘¥Øø(ð½‘¥Øø(ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°ˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬ˆÍÑå±”ô‰‰…­É½Õ¹è”Í˜É™í‰½É‘•Èµ±•™ÐèÑÁàÍ½±¥€ŒÄÔØÕŒÀˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑåÁ”ˆù)½ˆð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑ¥µ”ˆøÀÜèÌÀ4Ñ¼€ÀÌèÌÀA4€ à¸ÀÀ¡ÉÌ¤ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÉ•˜ˆøØÜÐ´äàÜÄð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±¥•¹Ðˆù5¥É…±”5¥±”A±…é„ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÍ¥Ñ”ˆøØÈØ€ÈÅÍÐMÑÉ••ÐY•É¼	•… ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±½ŒˆùY•É¼	•… ð½‘¥Øø(ð½‘¥Øø(ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°ˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬ˆÍÑå±”ô‰‰…­É½Õ¹è”Í˜É™í‰½É‘•Èµ±•™ÐèÑÁàÍ½±¥€ŒÄÔØÕŒÀˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑåÁ”ˆù)½ˆð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑ¥µ”ˆøÀÜèÌÀ4Ñ¼€ÀÌèÌÀA4€ à¸ÀÀ¡ÉÌ¤ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÉ•˜ˆøØÜÐ´äàÜÄð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±¥•¹Ðˆù5¥É…±”5¥±”A±…é„ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÍ¥Ñ”ˆøØÈØ€ÈÅÍÐMÑÉ••ÐY•É¼	•… ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±½ŒˆùY•É¼	•… ð½‘¥Øø(ð½‘¥Øø(ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°ˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬ˆÍÑå±”ô‰‰…­É½Õ¹è”Í˜É™í‰½É‘•Èµ±•™ÐèÑÁàÍ½±¥€ŒÄÔØÕŒÀˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑåÁ”ˆù)½ˆð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑ¥µ”ˆøÀÜèÌÀ4Ñ¼€ÀÌèÌÀA4€ à¸ÀÀ¡ÉÌ¤ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÉ•˜ˆøØÜÐ´äàÜÄð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±¥•¹Ðˆù5¥É…±”5¥±”A±…é„ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÍ¥Ñ”ˆøØÈØ€ÈÅÍÐMÑÉ••ÐY•É¼	•… ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±½ŒˆùY•É¼	•… ð½‘¥Øø(ð½‘¥Øø(ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°Ñ• µ¹…µ”ˆù=Ý•¸±µ•¥‘„ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°ˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬ˆÍÑå±”ô‰‰…­É½Õ¹è™”Ñ•Œí‰½É‘•Èµ±•™ÐèÑÁàÍ½±¥€”äÅ”ØÌˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑåÁ”ˆùAÕ‰±¥Œ!½±¥‘…äð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑ¥µ”ˆøÀÜèÐÔ4Ñ¼€ÀÌèÐÔA4€ à¸ÀÀ¡ÉÌ¤ð½‘¥Øø(ð½‘¥Øø(ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°ˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬ˆÍÑå±”ô‰‰…­É½Õ¹è”Í˜É™í‰½É‘•Èµ±•™ÐèÑÁàÍ½±¥€ŒÄÔØÕŒÀˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑåÁ”ˆù)½ˆð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑ¥µ”ˆøÀàèÀÀ4Ñ¼€ÄÀèÀÀ4€ È¸ÀÀ¡ÉÌ¤ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÉ•˜ˆøØØà´äàÔàð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±¥•¹Ðˆù‰¥‘”½¹ÑÉ…Ñ¥¹œð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÍ¥Ñ”ˆùQ½¹­•¸I•Ì¸ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±½ŒˆùA…±´	•… …É‘•¹Ìð½‘¥Øø(ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬ˆÍÑå±”ô‰‰…­É½Õ¹è”Í˜É™í‰½É‘•Èµ±•™ÐèÑÁàÍ½±¥€ŒÄÔØÕŒÀˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑåÁ”ˆù)½ˆð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑ¥µ”ˆøÀàèÄÔ4Ñ¼€ÀàèÐÔ4€ À¸ÔÀ¡ÉÌ¤ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÉ•˜ˆøØØà´äàØÀð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±¥•¹Ðˆù‰¥‘”½¹ÑÉ…Ñ¥¹œð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÍ¥Ñ”ˆùQ½¹­•¸I•Ì¸ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±½ŒˆùA…±´	•… …É‘•¹Ìð½‘¥Øø(ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬ˆÍÑå±”ô‰‰…­É½Õ¹è”Í˜É™í‰½É‘•Èµ±•™ÐèÑÁàÍ½±¥€ŒÄÔØÕŒÀˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑåÁ”ˆù)½ˆð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÑ¥µ”ˆøÀàèÐÔ4Ñ¼€ÀÐèÐÔA4€ à¸ÀÀ¡ÉÌ¤ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÉ•˜ˆøØØà´äàØÀð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µ±¥•¹Ðˆù‰¥‘”½¹ÑÉ…Ñ¥¹œð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰‰±½¬µÍ¥Ñ”ˆùQ½¹­•¸I•Ì¸ð½‘¥Øø(ñ‘¥Ø±…Ìô‰‰±½¬µ±½ŒˆùA…±´	•… …É‘•¹Ìð½‘¥Øø(ð½‘¥Øø(ð½‘¥Øø(ñ‘¥Ø±…ÍÌô‰•±°Ñ½‘…äˆø(ñ‘¥Ø±…ÍÌô‰‰±½¬ˆÍÑå±”ô‰‰…­É½Õ¹è”Í˜2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 11:30 AM (4.00 hrs)</div>
+<div class="block-ref">672-9867</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Donovan Res.</div>
+<div class="block-loc">North Palm Beach</div>
+</div>
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">11:30 AM to 03:30 PM (4.00 hrs)</div>
+<div class="block-ref">672-9869</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Donovan Res.</div>
+<div class="block-loc">North Palm Beach</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 08:30 AM (1.00 hrs)</div>
+<div class="block-ref">679-9877</div>
+<div class="block-client">Abide Contracting</div>
+<div class="block-site">Cantelmo Res</div>
+<div class="block-loc">Tequesta</div>
+</div>
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">08:30 AM to 04:00 PM (7.50 hrs)</div>
+<div class="block-ref">672-9867</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Donovan Res.</div>
+<div class="block-loc">North Palm Beach</div>
+</div>
+</div>
+<div class="cell empty"></div>
+<div class="cell empty"></div>
+<div class="cell tech-name">Pierson Egan</div>
+<div class="cell">
+<div class="block" style="background:#fce4ec;border-left:4px solid #e91e63">
+<div class="block-type">Public Holiday</div>
+<div class="block-time">08:30 AM to 04:30 PM (8.00 hrs)</div>
+</div>
+</div>
+<div class="cell empty"></div>
+<div class="cell today">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">09:30 AM to 11:00 PM (13.50 hrs)</div>
+<div class="block-ref">560-9822</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Novak Residence</div>
+<div class="block-loc">Palm Beach Gardens</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 03:30 PM (8.00 hrs)</div>
+<div class="block-ref">560-9822</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Novak Residence</div>
+<div class="block-loc">Palm Beach Gardens</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 03:30 PM (8.00 hrs)</div>
+<div class="block-ref">560-9822</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Novak Residence</div>
+<div class="block-loc">Palm Beach Gardens</div>
+</div>
+</div>
+<div class="cell empty"></div>
+<div class="cell tech-name">Gabe King</div>
+<div class="cell">
+<div class="block" style="background:#fce4ec;border-left:4px solid #e91e63">
+<div class="block-type">Public Holiday</div>
+<div class="block-time">07:30 AM to 03:30 PM (8.00 hrs)</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 11:30 AM (4.00 hrs)</div>
+<div class="block-ref">678-9876</div>
+<div class="block-client">MCM Estate Services</div>
+<div class="block-site">Christopher's home</div>
+<div class="block-loc">Stuart</div>
+</div>
+</div>
+<div class="cell today">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 11:30 AM (4.00 hrs)</div>
+<div class="block-ref">678-9876</div>
+<div class="block-client">MCM Estate Services</div>
+<div class="block-site">Christopher's home</div>
+<div class="block-loc">Stuart</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 11:30 AM (4.00 hrs)</div>
+<div class="block-ref">679-9877</div>
+<div class="block-client">Abide Contracting</div>
+<div class="block-site">Cantelmo Res</div>
+<div class="block-loc">Tequesta</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 11:30 AM (4.00 hrs)</div>
+<div class="block-ref">660-9840</div>
+<div class="block-client">Indigo Stuart Apartments</div>
+<div class="block-site">3800 S Kanner HWY Stuart</div>
+<div class="block-loc">Stuart</div>
+</div>
+</div>
+<div class="cell empty"></div>
+<div class="cell tech-name">Ken Klappert</div>
+<div class="cell">
+<div class="block" style="background:#fce4ec;border-left:4px solid #e91e63">
+<div class="block-type">Public Holiday</div>
+<div class="block-time">07:30 AM to 03:30 PM (8.00 hrs)</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 11:30 AM (4.00 hrs)</div>
+<div class="block-ref">678-9876</div>
+<div class="block-client">MCM Estate Services</div>
+<div class="block-site">Christopher's home</div>
+<div class="block-loc">Stuart</div>
+</div>
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">11:30 AM to 03:30 PM (4.00 hrs)</div>
+<div class="block-ref">679-9877</div>
+<div class="block-client">Abide Contracting</div>
+<div class="block-site">Cantelmo Res</div>
+<div class="block-loc">Tequesta</div>
+</div>
+</div>
+<div class="cell today">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 11:30 AM (4.00 hrs)</div>
+<div class="block-ref">678-9876</div>
+<div class="block-client">MCM Estate Services</div>
+<div class="block-site">Christopher's home</div>
+<div class="block-loc">Stuart</div>
+</div>
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">11:30 AM to 03:30 PM (4.00 hrs)</div>
+<div class="block-ref">672-9867</div>
+<div class="block-client">Webb Builders</div>
+<div class="block-site">Donovan Res.</div>
+<div class="block-loc">North Palm Beach</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 11:30 AM (4.00 hrs)</div>
+<div class="block-ref">679-9877</div>
+<div class="block-client">Abide Contracting</div>
+<div class="block-site">Cantelmo Res</div>
+<div class="block-loc">Tequesta</div>
+</div>
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">11:30 AM to 03:30 PM (4.00 hrs)</div>
+<div class="block-ref">660-9840</div>
+<div class="block-client">Indigo Stuart Apartments</div>
+<div class="block-site">3800 S Kanner HWY Stuart</div>
+<div class="block-loc">Stuart</div>
+</div>
+</div>
+<div class="cell">
+<div class="block" style="background:#e3f2fd;border-left:4px solid #1565c0">
+<div class="block-type">Job</div>
+<div class="block-time">07:30 AM to 11:30 AM (4.00 hrs)</div>
+<div class="block-ref">660-9840</div>
+<div class="block-client">Indigo Stuart Apartments</div>
+<div class="block-site">3800 S Kanner HWY Stuart</div>
+<div class="block-loc">Stuart</div>
+</div>
+</div>
+<div class="cell empty"></div>
+</div>
+</body>
+</html>
