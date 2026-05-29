@@ -1,571 +1,248 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8">
-<title>EES Weekly Schedule</title>
-<style>body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f0f0f0}
-.header{background:#1a237e;color:white;padding:15px 25px;display:flex;justify-content:space-between;align-items:center}
-.header h1{margin:0;font-size:20px}
-.updated{font-size:12px;opacity:0.8}
-.legend{background:white;padding:10px 25px;display:flex;gap:20px;flex-wrap:wrap;border-bottom:2px solid #1a237e}
-.legend-item{display:flex;align-items:center;gap:6px;font-size:13px}
-.legend-dot{width:14px;height:14px;border-radius:3px}
-.wrapper{overflow-x:auto;padding:15px}
-table{border-collapse:collapse;width:100%;background:white;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EES Weekly Schedule — Week of 2026-05-24</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f2f5; }
+.header { background: #1a237e; color: #fff; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+.header h1 { font-size: 18px; font-weight: 600; }
+.header .updated { font-size: 12px; opacity: 0.8; }
+.legend { background: #fff; padding: 10px 24px; display: flex; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid #ddd; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+.legend-dot { width: 12px; height: 12px; border-radius: 2px; }
+.grid-wrap { overflow-x: auto; padding: 16px; }
+.grid { display: grid; grid-template-columns: 160px repeat(7, minmax(140px, 1fr)); gap: 0; min-width: 900px; }
+.cell { border: 1px solid #ddd; padding: 8px; background: #fff; min-height: 60px; }
+.cell.header-cell { background: #1a237e; color: #fff; font-weight: 600; font-size: 12px; text-align: center; min-height: 36px; display: flex; align-items: center; justify-content: center; }
+.cell.today { background: #e8eaf6 !important; border: 2px solid #3949ab !important; }
+.cell.today.header-cell { background: #3949ab !important; }
+.cell.name-col { font-weight: 600; font-size: 13px; color: #1a237e; display: flex; align-items: center; }
+.cell.corner { background: #1a237e; }
 </style>
-</head><body>
+</head>
+<body>
 <div class="header">
-  <h1>Eastern Electric Solutions — Week of 2026-05-24</h1>
-  <span class="updated">Updated: 5/28/2026, 10:05:40 PM</span>
+  <h1>Eastern Electric Solutions &mdash; Week of 2026-05-24</h1>
+  <div class="updated">Updated: 2026-05-29 02:19</div>
 </div>
 <div class="legend">
-  <div class="legend-item"><div class="legend-dot" style="background:#e3f2fd;border:2px solid #1565c0"></div>Job</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#fce4ec;border:2px solid #e91e63"></div>Public Holiday</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#ffebee;border:2px solid #c62828"></div>Time Off</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#fff8e1;border:2px solid #f9a825"></div>Warehouse</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#ede7f6;border:2px solid #6a1b9a"></div>Meeting</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#1565c0"></div>Job</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#e91e63"></div>Public Holiday</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#c62828"></div>Unpaid Time Off</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f9a825"></div>Warehouse</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6a1b9a"></div>Meeting</div>
 </div>
-<div class="wrapper">
-<table>
-<thead><tr><th style="min-width:160px;background:#1a237e;color:white;padding:10px;text-align:left">Technician</th><th style="min-width:140px;background:#1a237e;color:white;padding:10px;text-align:center;">Sun<br><span style="font-size:11px">2026-05-24</span></th><th style="min-width:140px;background:#1a237e;color:white;padding:10px;text-align:center;">Mon<br><span style="font-size:11px">2026-05-25</span></th><th style="min-width:140px;background:#1a237e;color:white;padding:10px;text-align:center;">Tue<br><span style="font-size:11px">2026-05-26</span></th><th style="min-width:140px;background:#1a237e;color:white;padding:10px;text-align:center;">Wed<br><span style="font-size:11px">2026-05-27</span></th><th style="min-width:140px;background:#1a237e;color:white;padding:10px;text-align:center;">Thu<br><span style="font-size:11px">2026-05-28</span></th><th style="min-width:140px;background:#1565c0;color:white;padding:10px;text-align:center;border:2px solid #64b5f6;">Fri<br><span style="font-size:11px">2026-05-29</span></th><th style="min-width:140px;background:#1a237e;color:white;padding:10px;text-align:center;">Sat<br><span style="font-size:11px">2026-05-30</span></th></tr></thead>
-<tbody><tr><td style="background:#fff;padding:10px;font-weight:bold;vertical-align:top;white-space:nowrap;border-right:1px solid #ddd">Alex Skony</td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#fce4ec;border-left:4px solid #e91e63;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#e91e63">Public Holiday</div>
-      <div style="color:#555">07:30 AM to 03:30 PM (8.00 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 09:00 AM (1.00 hrs)</div>
-      <div style="color:#333">Ref: 669-9863</div>
-      <div style="color:#333">Carbo Management</div>
-      <div style="color:#666">Weatherman Res</div>
-      <div style="color:#888">Delray Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">09:00 AM to 04:00 PM (7.00 hrs)</div>
-      <div style="color:#333">Ref: 669-9863</div>
-      <div style="color:#333">Carbo Management</div>
-      <div style="color:#666">Weatherman Res</div>
-      <div style="color:#888">Delray Beach</div>
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">07:30 AM to 10:00 AM (2.50 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">11:00 AM to 03:30 PM (4.50 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">10:00 AM to 11:00 AM (1.00 hrs)</div>
-      <div style="color:#333">Ref: 560-9822</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Novak Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 02:30 PM (6.50 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">03:00 PM to 04:00 PM (1.00 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#e3f2fd;padding:8px;vertical-align:top;border:1px solid #1565c0;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 669-9863</div>
-      <div style="color:#333">Carbo Management</div>
-      <div style="color:#666">Weatherman Res</div>
-      <div style="color:#888">Delray Beach</div>
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#ffebee;border-left:4px solid #c62828;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#c62828">Unpaid Time Off</div>
-      <div style="color:#555">07:30 AM to 05:30 PM (10.00 hrs)</div>
-      
-      
-      
-      
-    </div></td></tr><tr><td style="background:#f8f9ff;padding:10px;font-weight:bold;vertical-align:top;white-space:nowrap;border-right:1px solid #ddd">Boris Kozlowskiy</td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#fce4ec;border-left:4px solid #e91e63;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#e91e63">Public Holiday</div>
-      <div style="color:#555">07:45 AM to 03:45 PM (8.00 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 04:00 PM (8.00 hrs)</div>
-      <div style="color:#333">Ref: 669-9863</div>
-      <div style="color:#333">Carbo Management</div>
-      <div style="color:#666">Weatherman Res</div>
-      <div style="color:#888">Delray Beach</div>
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">07:30 AM to 11:30 AM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 240-275</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Owen Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">12:00 PM to 04:00 PM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 240-274</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Owen Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 02:30 PM (6.50 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">03:00 PM to 04:00 PM (1.00 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#e3f2fd;padding:8px;vertical-align:top;border:1px solid #1565c0;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 669-9863</div>
-      <div style="color:#333">Carbo Management</div>
-      <div style="color:#666">Weatherman Res</div>
-      <div style="color:#888">Delray Beach</div>
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td></tr><tr><td style="background:#fff;padding:10px;font-weight:bold;vertical-align:top;white-space:nowrap;border-right:1px solid #ddd">Ethan Almeida</td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#fce4ec;border-left:4px solid #e91e63;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#e91e63">Public Holiday</div>
-      <div style="color:#555">07:30 AM to 03:30 PM (8.00 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:15 AM to 01:30 PM (5.25 hrs)</div>
-      <div style="color:#333">Ref: 668-9858</div>
-      <div style="color:#333">Abide Contracting</div>
-      <div style="color:#666">Tonken Res.</div>
-      <div style="color:#888">Palm Beach Gardens</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">01:30 PM to 05:00 PM (3.50 hrs)</div>
-      <div style="color:#333">Ref: 668-9860</div>
-      <div style="color:#333">Abide Contracting</div>
-      <div style="color:#666">Tonken Res.</div>
-      <div style="color:#888">Palm Beach Gardens</div>
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">07:00 AM to 08:00 AM (1.00 hrs)</div>
-      <div style="color:#333">Ref: 674-9872</div>
-      <div style="color:#333">Miracle Mile Plaza</div>
-      <div style="color:#666">626 21st Street Vero Beach</div>
-      <div style="color:#888">Vero Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 10:45 AM (2.75 hrs)</div>
-      <div style="color:#333">Ref: 674-9872</div>
-      <div style="color:#333">Miracle Mile Plaza</div>
-      <div style="color:#666">626 21st Street Vero Beach</div>
-      <div style="color:#888">Vero Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">10:45 AM to 12:30 PM (1.75 hrs)</div>
-      <div style="color:#333">Ref: 668-9858</div>
-      <div style="color:#333">Abide Contracting</div>
-      <div style="color:#666">Tonken Res.</div>
-      <div style="color:#888">Palm Beach Gardens</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">12:30 PM to 02:00 PM (1.50 hrs)</div>
-      <div style="color:#333">Ref: 668-9860</div>
-      <div style="color:#333">Abide Contracting</div>
-      <div style="color:#666">Tonken Res.</div>
-      <div style="color:#888">Palm Beach Gardens</div>
-    </div><div style="background:#fff8e1;border-left:4px solid #f9a825;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#f9a825">Warehouse</div>
-      <div style="color:#555">02:00 PM to 02:45 PM (0.75 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">06:00 AM to 07:00 AM (1.00 hrs)</div>
-      <div style="color:#333">Ref: 674-9872</div>
-      <div style="color:#333">Miracle Mile Plaza</div>
-      <div style="color:#666">626 21st Street Vero Beach</div>
-      <div style="color:#888">Vero Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">07:00 AM to 08:45 AM (1.75 hrs)</div>
-      <div style="color:#333">Ref: 674-9872</div>
-      <div style="color:#333">Miracle Mile Plaza</div>
-      <div style="color:#666">626 21st Street Vero Beach</div>
-      <div style="color:#888">Vero Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:45 AM to 11:15 AM (2.50 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">11:15 AM to 11:30 AM (0.25 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">12:30 PM to 02:15 PM (1.75 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">11:15 AM to 12:30 PM (1.25 hrs)</div>
-      <div style="color:#333">Ref: 680-9878</div>
-      <div style="color:#333">Kentrick Services LLC</div>
-      <div style="color:#666">12204 Seaward Dr.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#e3f2fd;padding:8px;vertical-align:top;border:1px solid #1565c0;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 11:00 AM (3.00 hrs)</div>
-      <div style="color:#333">Ref: 678-9876</div>
-      <div style="color:#333">MCM Estate Services</div>
-      <div style="color:#666">Christopher's home</div>
-      <div style="color:#888">Stuart</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">11:00 AM to 12:30 PM (1.50 hrs)</div>
-      <div style="color:#333">Ref: 676-9874</div>
-      <div style="color:#333">Tayler Chiropractic and Laser Center</div>
-      <div style="color:#666">11382 Prosperity Farms Road, Suite 225 Palm Beach Gardens</div>
-      <div style="color:#888">Palm Beach Gardens</div>
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td></tr><tr><td style="background:#f8f9ff;padding:10px;font-weight:bold;vertical-align:top;white-space:nowrap;border-right:1px solid #ddd">Gabe King</td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#fce4ec;border-left:4px solid #e91e63;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#e91e63">Public Holiday</div>
-      <div style="color:#555">07:30 AM to 03:30 PM (8.00 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 660-9840</div>
-      <div style="color:#333">Indigo Stuart Apartments</div>
-      <div style="color:#666">3800 S Kanner HWY Stuart</div>
-      <div style="color:#888">stuart</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">12:30 PM to 05:00 PM (4.50 hrs)</div>
-      <div style="color:#333">Ref: 660-9840</div>
-      <div style="color:#333">Indigo Stuart Apartments</div>
-      <div style="color:#666">3800 S Kanner HWY Stuart</div>
-      <div style="color:#888">stuart</div>
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">07:00 AM to 08:00 AM (1.00 hrs)</div>
-      <div style="color:#333">Ref: 674-9872</div>
-      <div style="color:#333">Miracle Mile Plaza</div>
-      <div style="color:#666">626 21st Street Vero Beach</div>
-      <div style="color:#888">Vero Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 10:45 AM (2.75 hrs)</div>
-      <div style="color:#333">Ref: 674-9872</div>
-      <div style="color:#333">Miracle Mile Plaza</div>
-      <div style="color:#666">626 21st Street Vero Beach</div>
-      <div style="color:#888">Vero Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">10:45 AM to 11:00 AM (0.25 hrs)</div>
-      <div style="color:#333">Ref: 674-9872</div>
-      <div style="color:#333">Miracle Mile Plaza</div>
-      <div style="color:#666">626 21st Street Vero Beach</div>
-      <div style="color:#888">Vero Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">11:00 AM to 12:30 PM (1.50 hrs)</div>
-      <div style="color:#333">Ref: 668-9858</div>
-      <div style="color:#333">Abide Contracting</div>
-      <div style="color:#666">Tonken Res.</div>
-      <div style="color:#888">Palm Beach Gardens</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">12:30 PM to 02:00 PM (1.50 hrs)</div>
-      <div style="color:#333">Ref: 668-9858</div>
-      <div style="color:#333">Abide Contracting</div>
-      <div style="color:#666">Tonken Res.</div>
-      <div style="color:#888">Palm Beach Gardens</div>
-    </div><div style="background:#fff8e1;border-left:4px solid #f9a825;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#f9a825">Warehouse</div>
-      <div style="color:#555">02:00 PM to 03:00 PM (1.00 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">06:00 AM to 07:00 AM (1.00 hrs)</div>
-      <div style="color:#333">Ref: 674-9872</div>
-      <div style="color:#333">Miracle Mile Plaza</div>
-      <div style="color:#666">626 21st Street Vero Beach</div>
-      <div style="color:#888">Vero Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">07:00 AM to 08:45 AM (1.75 hrs)</div>
-      <div style="color:#333">Ref: 674-9872</div>
-      <div style="color:#333">Miracle Mile Plaza</div>
-      <div style="color:#666">626 21st Street Vero Beach</div>
-      <div style="color:#888">Vero Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:45 AM to 10:15 AM (1.50 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">10:15 AM to 02:00 PM (3.75 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#e3f2fd;padding:8px;vertical-align:top;border:1px solid #1565c0;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">07:30 AM to 11:30 AM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 660-9840</div>
-      <div style="color:#333">Indigo Stuart Apartments</div>
-      <div style="color:#666">3800 S Kanner HWY Stuart</div>
-      <div style="color:#888">stuart</div>
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td></tr><tr><td style="background:#fff;padding:10px;font-weight:bold;vertical-align:top;white-space:nowrap;border-right:1px solid #ddd">Ken Klappert</td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#fce4ec;border-left:4px solid #e91e63;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#e91e63">Public Holiday</div>
-      <div style="color:#555">08:15 AM to 04:15 PM (8.00 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 240-274</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Owen Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">12:30 PM to 04:15 PM (3.75 hrs)</div>
-      <div style="color:#333">Ref: 240-274</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Owen Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">07:00 AM to 12:00 PM (5.00 hrs)</div>
-      <div style="color:#333">Ref: 240-274</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Owen Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">12:30 PM to 04:00 PM (3.50 hrs)</div>
-      <div style="color:#333">Ref: 240-274</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Owen Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">07:30 AM to 12:00 PM (4.50 hrs)</div>
-      <div style="color:#333">Ref: 240-274</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Owen Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">12:30 PM to 04:00 PM (3.50 hrs)</div>
-      <div style="color:#333">Ref: 240-274</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Owen Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#e3f2fd;padding:8px;vertical-align:top;border:1px solid #1565c0;"><div style="background:#ffebee;border-left:4px solid #c62828;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#c62828">Unpaid Time Off</div>
-      <div style="color:#555">12:00 PM to 04:00 PM (4.00 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td></tr><tr><td style="background:#f8f9ff;padding:10px;font-weight:bold;vertical-align:top;white-space:nowrap;border-right:1px solid #ddd">Marcos Dos Santos</td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#fce4ec;border-left:4px solid #e91e63;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#e91e63">Public Holiday</div>
-      <div style="color:#555">07:30 AM to 03:30 PM (8.00 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 660-9840</div>
-      <div style="color:#333">Indigo Stuart Apartments</div>
-      <div style="color:#666">3800 S Kanner HWY Stuart</div>
-      <div style="color:#888">stuart</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">12:30 PM to 05:00 PM (4.50 hrs)</div>
-      <div style="color:#333">Ref: 660-9840</div>
-      <div style="color:#333">Indigo Stuart Apartments</div>
-      <div style="color:#666">3800 S Kanner HWY Stuart</div>
-      <div style="color:#888">stuart</div>
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#ffebee;border-left:4px solid #c62828;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#c62828">Unpaid Time Off</div>
-      <div style="color:#555">07:30 AM to 12:00 PM (4.50 hrs)</div>
-      
-      
-      
-      
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">12:00 PM to 01:00 PM (1.00 hrs)</div>
-      <div style="color:#333">Ref: 672-9869</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">01:00 PM to 03:30 PM (2.50 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 240-274</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Owen Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">12:30 PM to 04:00 PM (3.50 hrs)</div>
-      <div style="color:#333">Ref: 240-274</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Owen Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#e3f2fd;padding:8px;vertical-align:top;border:1px solid #1565c0;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">07:30 AM to 11:30 AM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 660-9840</div>
-      <div style="color:#333">Indigo Stuart Apartments</div>
-      <div style="color:#666">3800 S Kanner HWY Stuart</div>
-      <div style="color:#888">stuart</div>
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td></tr><tr><td style="background:#fff;padding:10px;font-weight:bold;vertical-align:top;white-space:nowrap;border-right:1px solid #ddd">Owen Almeida</td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#fce4ec;border-left:4px solid #e91e63;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#e91e63">Public Holiday</div>
-      <div style="color:#555">07:45 AM to 03:45 PM (8.00 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 10:00 AM (2.00 hrs)</div>
-      <div style="color:#333">Ref: 668-9858</div>
-      <div style="color:#333">Abide Contracting</div>
-      <div style="color:#666">Tonken Res.</div>
-      <div style="color:#888">Palm Beach Gardens</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:15 AM to 08:45 AM (0.50 hrs)</div>
-      <div style="color:#333">Ref: 668-9860</div>
-      <div style="color:#333">Abide Contracting</div>
-      <div style="color:#666">Tonken Res.</div>
-      <div style="color:#888">Palm Beach Gardens</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:45 AM to 04:45 PM (8.00 hrs)</div>
-      <div style="color:#333">Ref: 668-9860</div>
-      <div style="color:#333">Abide Contracting</div>
-      <div style="color:#666">Tonken Res.</div>
-      <div style="color:#888">Palm Beach Gardens</div>
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">07:30 AM to 11:30 AM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">11:30 AM to 03:30 PM (4.00 hrs)</div>
-      <div style="color:#333">Ref: 672-9869</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:15 AM to 09:15 AM (1.00 hrs)</div>
-      <div style="color:#333">Ref: 679-9877</div>
-      <div style="color:#333">Abide Contracting</div>
-      <div style="color:#666">Cantelmo Res</div>
-      <div style="color:#888">Tequesta</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">10:45 AM to 11:00 AM (0.25 hrs)</div>
-      <div style="color:#333">Ref: 672-9867</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Donovan Res.</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#e3f2fd;padding:8px;vertical-align:top;border:1px solid #1565c0;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">08:00 AM to 11:00 AM (3.00 hrs)</div>
-      <div style="color:#333">Ref: 678-9876</div>
-      <div style="color:#333">MCM Estate Services</div>
-      <div style="color:#666">Christopher's home</div>
-      <div style="color:#888">Stuart</div>
-    </div><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">11:00 AM to 12:30 PM (1.50 hrs)</div>
-      <div style="color:#333">Ref: 676-9874</div>
-      <div style="color:#333">Tayler Chiropractic and Laser Center</div>
-      <div style="color:#666">11382 Prosperity Farms Road, Suite 225 Palm Beach Gardens</div>
-      <div style="color:#888">Palm Beach Gardens</div>
-    </div></td><td style="background:#fff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td></tr><tr><td style="background:#f8f9ff;padding:10px;font-weight:bold;vertical-align:top;white-space:nowrap;border-right:1px solid #ddd">Pierson Egan</td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#fce4ec;border-left:4px solid #e91e63;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#e91e63">Public Holiday</div>
-      <div style="color:#555">08:30 AM to 04:30 PM (8.00 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#e3f2fd;border-left:4px solid #1565c0;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#1565c0">Job</div>
-      <div style="color:#555">09:30 AM to 11:00 AM (1.50 hrs)</div>
-      <div style="color:#333">Ref: 560-9822</div>
-      <div style="color:#333">Webb Builders</div>
-      <div style="color:#666">Novak Residence</div>
-      <div style="color:#888">North Palm Beach</div>
-    </div></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><div style="background:#ede7f6;border-left:4px solid #6a1b9a;margin:3px 0;padding:5px 8px;border-radius:3px;font-size:12px;">
-      <div style="font-weight:bold;color:#6a1b9a">Meeting</div>
-      <div style="color:#555">12:00 PM to 01:00 PM (1.00 hrs)</div>
-      
-      
-      
-      
-    </div></td><td style="background:#e3f2fd;padding:8px;vertical-align:top;border:1px solid #1565c0;"><span style="color:#ccc;font-size:11px">—</span></td><td style="background:#f8f9ff;padding:8px;vertical-align:top;border:1px solid #eee;"><span style="color:#ccc;font-size:11px">—</span></td></tr></tbody>
-</table>
+<div class="grid-wrap">
+<div class="grid">
+  <div class="cell corner header-cell">Technician</div>
+  <div class="cell header-cell">Sun 5/24</div>
+  <div class="cell header-cell">Mon 5/25</div>
+  <div class="cell header-cell">Tue 5/26</div>
+  <div class="cell header-cell">Wed 5/27</div>
+  <div class="cell header-cell today">Thu 5/28</div>
+  <div class="cell header-cell">Fri 5/29</div>
+  <div class="cell header-cell">Sat 5/30</div>
+  <div class="cell name-col">Alex Skony</div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+    <div style="background:#fce4ec;border-left:4px solid #e91e63;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#e91e63">Public Holiday</div><div style="font-size:10px;color:#555">07:30 AM to 03:30 PM (8.00 hrs)</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 09:00 AM (1.00 hrs)</div><div style="font-size:10px;color:#777">#669-9863</div><div style="font-size:10px;color:#333;font-weight:500">Carbo Management</div><div style="font-size:10px;color:#555">Weatherman Res</div><div style="font-size:10px;color:#888">Delray Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">09:00 AM to 04:00 PM (7.00 hrs)</div><div style="font-size:10px;color:#777">#669-9863</div><div style="font-size:10px;color:#333;font-weight:500">Carbo Management</div><div style="font-size:10px;color:#555">Weatherman Res</div><div style="font-size:10px;color:#888">Delray Beach</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">07:30 AM to 10:00 AM (2.50 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">11:00 AM to 03:30 PM (4.50 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">10:00 AM to 11:00 AM (1.00 hrs)</div><div style="font-size:10px;color:#777">#560-9822</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Novak Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell today">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 02:30 PM (6.50 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">03:00 PM to 04:00 PM (1.00 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div><div style="font-size:10px;color:#777">#669-9863</div><div style="font-size:10px;color:#333;font-weight:500">Carbo Management</div><div style="font-size:10px;color:#555">Weatherman Res</div><div style="font-size:10px;color:#888">Delray Beach</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#ffebee;border-left:4px solid #c62828;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#c62828">Unpaid Time Off</div><div style="font-size:10px;color:#555">07:30 AM to 05:30 PM (10.00 hrs)</div></div>
+  </div>
+  <div class="cell name-col">Boris Kozlowskiy</div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+    <div style="background:#fce4ec;border-left:4px solid #e91e63;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#e91e63">Public Holiday</div><div style="font-size:10px;color:#555">07:45 AM to 03:45 PM (8.00 hrs)</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 04:00 PM (8.00 hrs)</div><div style="font-size:10px;color:#777">#669-9863</div><div style="font-size:10px;color:#333;font-weight:500">Carbo Management</div><div style="font-size:10px;color:#555">Weatherman Res</div><div style="font-size:10px;color:#888">Delray Beach</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">07:30 AM to 11:30 AM (4.00 hrs)</div><div style="font-size:10px;color:#777">#240-275</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Owen Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">12:00 PM to 04:00 PM (4.00 hrs)</div><div style="font-size:10px;color:#777">#240-274</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Owen Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell today">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 02:30 PM (6.50 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">03:00 PM to 04:00 PM (1.00 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div><div style="font-size:10px;color:#777">#669-9863</div><div style="font-size:10px;color:#333;font-weight:500">Carbo Management</div><div style="font-size:10px;color:#555">Weatherman Res</div><div style="font-size:10px;color:#888">Delray Beach</div></div>
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell name-col">Ethan Almeida</div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+    <div style="background:#fce4ec;border-left:4px solid #e91e63;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#e91e63">Public Holiday</div><div style="font-size:10px;color:#555">07:30 AM to 03:30 PM (8.00 hrs)</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:15 AM to 01:30 PM (5.25 hrs)</div><div style="font-size:10px;color:#777">#668-9858</div><div style="font-size:10px;color:#333;font-weight:500">Abide Contracting</div><div style="font-size:10px;color:#555">Tonken Res.</div><div style="font-size:10px;color:#888">Palm Beach Gardens</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">01:30 PM to 05:00 PM (3.50 hrs)</div><div style="font-size:10px;color:#777">#668-9860</div><div style="font-size:10px;color:#333;font-weight:500">Abide Contracting</div><div style="font-size:10px;color:#555">Tonken Res.</div><div style="font-size:10px;color:#888">Palm Beach Gardens</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">07:00 AM to 08:00 AM (1.00 hrs)</div><div style="font-size:10px;color:#777">#674-9872</div><div style="font-size:10px;color:#333;font-weight:500">Miracle Mile Plaza</div><div style="font-size:10px;color:#555">626 21st Street Vero Beach</div><div style="font-size:10px;color:#888">Vero Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 10:45 AM (2.75 hrs)</div><div style="font-size:10px;color:#777">#674-9872</div><div style="font-size:10px;color:#333;font-weight:500">Miracle Mile Plaza</div><div style="font-size:10px;color:#555">626 21st Street Vero Beach</div><div style="font-size:10px;color:#888">Vero Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">10:45 AM to 12:30 PM (1.75 hrs)</div><div style="font-size:10px;color:#777">#668-9858</div><div style="font-size:10px;color:#333;font-weight:500">Abide Contracting</div><div style="font-size:10px;color:#555">Tonken Res.</div><div style="font-size:10px;color:#888">Palm Beach Gardens</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">12:30 PM to 02:00 PM (1.50 hrs)</div><div style="font-size:10px;color:#777">#668-9860</div><div style="font-size:10px;color:#333;font-weight:500">Abide Contracting</div><div style="font-size:10px;color:#555">Tonken Res.</div><div style="font-size:10px;color:#888">Palm Beach Gardens</div></div>
+    <div style="background:#fff8e1;border-left:4px solid #f9a825;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#f9a825">Warehouse</div><div style="font-size:10px;color:#555">02:00 PM to 02:45 PM (0.75 hrs)</div></div>
+  </div>
+  <div class="cell today">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">06:00 AM to 07:00 AM (1.00 hrs)</div><div style="font-size:10px;color:#777">#674-9872</div><div style="font-size:10px;color:#333;font-weight:500">Miracle Mile Plaza</div><div style="font-size:10px;color:#555">626 21st Street Vero Beach</div><div style="font-size:10px;color:#888">Vero Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">07:00 AM to 08:45 AM (1.75 hrs)</div><div style="font-size:10px;color:#777">#674-9872</div><div style="font-size:10px;color:#333;font-weight:500">Miracle Mile Plaza</div><div style="font-size:10px;color:#555">626 21st Street Vero Beach</div><div style="font-size:10px;color:#888">Vero Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:45 AM to 11:15 AM (2.50 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">11:15 AM to 11:30 AM (0.25 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">12:30 PM to 02:15 PM (1.75 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">11:15 AM to 12:30 PM (1.25 hrs)</div><div style="font-size:10px;color:#777">#680-9878</div><div style="font-size:10px;color:#333;font-weight:500">Kentrick Services LLC</div><div style="font-size:10px;color:#555">12204 Seaward Dr.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 11:00 AM (3.00 hrs)</div><div style="font-size:10px;color:#777">#678-9876</div><div style="font-size:10px;color:#333;font-weight:500">MCM Estate Services</div><div style="font-size:10px;color:#555">Christopher's home</div><div style="font-size:10px;color:#888">Stuart</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">11:00 AM to 12:30 PM (1.50 hrs)</div><div style="font-size:10px;color:#777">#676-9874</div><div style="font-size:10px;color:#333;font-weight:500">Tayler Chiropractic and Laser Center</div><div style="font-size:10px;color:#555">11382 Prosperity Farms Road, Suite 225 Palm Beach Gardens</div><div style="font-size:10px;color:#888">Palm Beach Gardens</div></div>
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell name-col">Gabe King</div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+    <div style="background:#fce4ec;border-left:4px solid #e91e63;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#e91e63">Public Holiday</div><div style="font-size:10px;color:#555">07:30 AM to 03:30 PM (8.00 hrs)</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div><div style="font-size:10px;color:#777">#660-9840</div><div style="font-size:10px;color:#333;font-weight:500">Indigo Stuart Apartments</div><div style="font-size:10px;color:#555">3800 S Kanner HWY Stuart</div><div style="font-size:10px;color:#888">stuart</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">12:30 PM to 05:00 PM (4.50 hrs)</div><div style="font-size:10px;color:#777">#660-9840</div><div style="font-size:10px;color:#333;font-weight:500">Indigo Stuart Apartments</div><div style="font-size:10px;color:#555">3800 S Kanner HWY Stuart</div><div style="font-size:10px;color:#888">stuart</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">07:00 AM to 08:00 AM (1.00 hrs)</div><div style="font-size:10px;color:#777">#674-9872</div><div style="font-size:10px;color:#333;font-weight:500">Miracle Mile Plaza</div><div style="font-size:10px;color:#555">626 21st Street Vero Beach</div><div style="font-size:10px;color:#888">Vero Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 10:45 AM (2.75 hrs)</div><div style="font-size:10px;color:#777">#674-9872</div><div style="font-size:10px;color:#333;font-weight:500">Miracle Mile Plaza</div><div style="font-size:10px;color:#555">626 21st Street Vero Beach</div><div style="font-size:10px;color:#888">Vero Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">10:45 AM to 11:00 AM (0.25 hrs)</div><div style="font-size:10px;color:#777">#674-9872</div><div style="font-size:10px;color:#333;font-weight:500">Miracle Mile Plaza</div><div style="font-size:10px;color:#555">626 21st Street Vero Beach</div><div style="font-size:10px;color:#888">Vero Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">11:00 AM to 12:30 PM (1.50 hrs)</div><div style="font-size:10px;color:#777">#668-9858</div><div style="font-size:10px;color:#333;font-weight:500">Abide Contracting</div><div style="font-size:10px;color:#555">Tonken Res.</div><div style="font-size:10px;color:#888">Palm Beach Gardens</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">12:30 PM to 02:00 PM (1.50 hrs)</div><div style="font-size:10px;color:#777">#668-9858</div><div style="font-size:10px;color:#333;font-weight:500">Abide Contracting</div><div style="font-size:10px;color:#555">Tonken Res.</div><div style="font-size:10px;color:#888">Palm Beach Gardens</div></div>
+    <div style="background:#fff8e1;border-left:4px solid #f9a825;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#f9a825">Warehouse</div><div style="font-size:10px;color:#555">02:00 PM to 03:00 PM (1.00 hrs)</div></div>
+  </div>
+  <div class="cell today">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">06:00 AM to 07:00 AM (1.00 hrs)</div><div style="font-size:10px;color:#777">#674-9872</div><div style="font-size:10px;color:#333;font-weight:500">Miracle Mile Plaza</div><div style="font-size:10px;color:#555">626 21st Street Vero Beach</div><div style="font-size:10px;color:#888">Vero Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">07:00 AM to 08:45 AM (1.75 hrs)</div><div style="font-size:10px;color:#777">#674-9872</div><div style="font-size:10px;color:#333;font-weight:500">Miracle Mile Plaza</div><div style="font-size:10px;color:#555">626 21st Street Vero Beach</div><div style="font-size:10px;color:#888">Vero Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:45 AM to 10:15 AM (1.50 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">10:15 AM to 02:00 PM (3.75 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">07:30 AM to 11:30 AM (4.00 hrs)</div><div style="font-size:10px;color:#777">#660-9840</div><div style="font-size:10px;color:#333;font-weight:500">Indigo Stuart Apartments</div><div style="font-size:10px;color:#555">3800 S Kanner HWY Stuart</div><div style="font-size:10px;color:#888">stuart</div></div>
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell name-col">Ken Klappert</div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+    <div style="background:#fce4ec;border-left:4px solid #e91e63;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#e91e63">Public Holiday</div><div style="font-size:10px;color:#555">08:15 AM to 04:15 PM (8.00 hrs)</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div><div style="font-size:10px;color:#777">#240-274</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Owen Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">12:30 PM to 04:15 PM (3.75 hrs)</div><div style="font-size:10px;color:#777">#240-274</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Owen Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">07:00 AM to 12:00 PM (5.00 hrs)</div><div style="font-size:10px;color:#777">#240-274</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Owen Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">12:30 PM to 04:00 PM (3.50 hrs)</div><div style="font-size:10px;color:#777">#240-274</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Owen Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell today">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">07:30 AM to 12:00 PM (4.50 hrs)</div><div style="font-size:10px;color:#777">#240-274</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Owen Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">12:30 PM to 04:00 PM (3.50 hrs)</div><div style="font-size:10px;color:#777">#240-274</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Owen Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#ffebee;border-left:4px solid #c62828;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#c62828">Unpaid Time Off</div><div style="font-size:10px;color:#555">12:00 PM to 04:00 PM (4.00 hrs)</div></div>
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell name-col">Marcos Dos Santos</div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+    <div style="background:#fce4ec;border-left:4px solid #e91e63;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#e91e63">Public Holiday</div><div style="font-size:10px;color:#555">07:30 AM to 03:30 PM (8.00 hrs)</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div><div style="font-size:10px;color:#777">#660-9840</div><div style="font-size:10px;color:#333;font-weight:500">Indigo Stuart Apartments</div><div style="font-size:10px;color:#555">3800 S Kanner HWY Stuart</div><div style="font-size:10px;color:#888">stuart</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">12:30 PM to 05:00 PM (4.50 hrs)</div><div style="font-size:10px;color:#777">#660-9840</div><div style="font-size:10px;color:#333;font-weight:500">Indigo Stuart Apartments</div><div style="font-size:10px;color:#555">3800 S Kanner HWY Stuart</div><div style="font-size:10px;color:#888">stuart</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#ffebee;border-left:4px solid #c62828;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#c62828">Unpaid Time Off</div><div style="font-size:10px;color:#555">07:30 AM to 12:00 PM (4.50 hrs)</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">12:00 PM to 01:00 PM (1.00 hrs)</div><div style="font-size:10px;color:#777">#672-9869</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">01:00 PM to 03:30 PM (2.50 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell today">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 12:00 PM (4.00 hrs)</div><div style="font-size:10px;color:#777">#240-274</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Owen Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">12:30 PM to 04:00 PM (3.50 hrs)</div><div style="font-size:10px;color:#777">#240-274</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Owen Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">07:30 AM to 11:30 AM (4.00 hrs)</div><div style="font-size:10px;color:#777">#660-9840</div><div style="font-size:10px;color:#333;font-weight:500">Indigo Stuart Apartments</div><div style="font-size:10px;color:#555">3800 S Kanner HWY Stuart</div><div style="font-size:10px;color:#888">stuart</div></div>
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell name-col">Owen Almeida</div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+    <div style="background:#fce4ec;border-left:4px solid #e91e63;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#e91e63">Public Holiday</div><div style="font-size:10px;color:#555">07:45 AM to 03:45 PM (8.00 hrs)</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 10:00 AM (2.00 hrs)</div><div style="font-size:10px;color:#777">#668-9858</div><div style="font-size:10px;color:#333;font-weight:500">Abide Contracting</div><div style="font-size:10px;color:#555">Tonken Res.</div><div style="font-size:10px;color:#888">Palm Beach Gardens</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:15 AM to 08:45 AM (0.50 hrs)</div><div style="font-size:10px;color:#777">#668-9860</div><div style="font-size:10px;color:#333;font-weight:500">Abide Contracting</div><div style="font-size:10px;color:#555">Tonken Res.</div><div style="font-size:10px;color:#888">Palm Beach Gardens</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:45 AM to 04:45 PM (8.00 hrs)</div><div style="font-size:10px;color:#777">#668-9860</div><div style="font-size:10px;color:#333;font-weight:500">Abide Contracting</div><div style="font-size:10px;color:#555">Tonken Res.</div><div style="font-size:10px;color:#888">Palm Beach Gardens</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">07:30 AM to 11:30 AM (4.00 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">11:30 AM to 03:30 PM (4.00 hrs)</div><div style="font-size:10px;color:#777">#672-9869</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell today">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:15 AM to 09:15 AM (1.00 hrs)</div><div style="font-size:10px;color:#777">#679-9877</div><div style="font-size:10px;color:#333;font-weight:500">Abide Contracting</div><div style="font-size:10px;color:#555">Cantelmo Res</div><div style="font-size:10px;color:#888">Tequesta</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">10:45 AM to 11:00 AM (0.25 hrs)</div><div style="font-size:10px;color:#777">#672-9867</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Donovan Res.</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">08:00 AM to 11:00 AM (3.00 hrs)</div><div style="font-size:10px;color:#777">#678-9876</div><div style="font-size:10px;color:#333;font-weight:500">MCM Estate Services</div><div style="font-size:10px;color:#555">Christopher's home</div><div style="font-size:10px;color:#888">Stuart</div></div>
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">11:00 AM to 12:30 PM (1.50 hrs)</div><div style="font-size:10px;color:#777">#676-9874</div><div style="font-size:10px;color:#333;font-weight:500">Tayler Chiropractic and Laser Center</div><div style="font-size:10px;color:#555">11382 Prosperity Farms Road, Suite 225 Palm Beach Gardens</div><div style="font-size:10px;color:#888">Palm Beach Gardens</div></div>
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell name-col">Pierson Egan</div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+    <div style="background:#fce4ec;border-left:4px solid #e91e63;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#e91e63">Public Holiday</div><div style="font-size:10px;color:#555">08:30 AM to 04:30 PM (8.00 hrs)</div></div>
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+    <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#1565c0">Job</div><div style="font-size:10px;color:#555">09:30 AM to 11:00 AM (1.50 hrs)</div><div style="font-size:10px;color:#777">#560-9822</div><div style="font-size:10px;color:#333;font-weight:500">Webb Builders</div><div style="font-size:10px;color:#555">Novak Residence</div><div style="font-size:10px;color:#888">North Palm Beach</div></div>
+  </div>
+  <div class="cell today">
+    <div style="background:#ede7f6;border-left:4px solid #6a1b9a;padding:5px 7px;margin-bottom:4px;border-radius:3px"><div style="font-weight:600;font-size:11px;color:#6a1b9a">Meeting</div><div style="font-size:10px;color:#555">12:00 PM to 01:00 PM (1.00 hrs)</div></div>
+  </div>
+  <div class="cell">
+  </div>
+  <div class="cell">
+  </div>
 </div>
-</body></html>
+</div>
+</body>
+</html>
