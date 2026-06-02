@@ -1,0 +1,13 @@
+{
+  "name": "ees-schedule-webhook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simpro schedule webhook → regenerate EES weekly schedule HTML → commit to GitHub Pages.",
+  "main": "api/webhook.js",
+  "scripts": {
+    "test": "node test/local.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
