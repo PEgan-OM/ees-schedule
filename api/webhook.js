@@ -4,7 +4,7 @@
 // the whole week (rather than patching one block) keeps the output idempotent
 // and always consistent with Simpro.
 
-const { fetchWeek } = require('../lib/simpro');
+const { fetchWeeks } = require('../lib/simpro');
 const { buildHtml } = require('../lib/buildHtml');
 const { commitFile } = require('../lib/github');
 
@@ -31,31 +31,27 @@ module.exports = async (req, res) => {
   }
 
   try {
-    // Simpro's payload includes the affected schedule's date; use it to pick
-    // the right week. Fall back to "now" if absent. Body may arrive parsed or raw.
-    let payload = req.body;
-    if (typeof payload === 'string') {
-      try { payload = JSON.parse(payload); } catch { payload = {}; }
-    }
-    payload = payload || {};
-    const refDate =
-      payload.date || payload.Date || payload?.reference?.date || undefined;
+    // Always rebuild from the current week onward (8 weeks ahead),
+    // regardless of which week the edited schedule belonged to. This keeps the
+    // published page anchored to "now" so the timestamp refreshes on every
+    // event and the next-week view stays available — instead of bailing out
+    // when the edited week happens to have no rows.
+    const { weeks, totalTechs } = await fetchWeeks(undefined, 8);
 
-    const { sched, dates, start, end, techs } = await fetchWeek(refDate);
-
-    if (!techs) {
+    if (!totalTechs) {
       // Acknowledge so Simpro doesn't retry-storm, but report the empty pull.
-      res.status(200).json({ ok: false, reason: 'no schedule rows returned', start, end });
+      res.status(200).json({ ok: false, reason: 'no schedule rows returned' });
       return;
     }
 
-    const html = buildHtml({ sched, dates });
+    const html = buildHtml({ weeks });
+    const span = `${weeks[0].start}→${weeks[weeks.length - 1].end}`;
     const commit = await commitFile({
       html,
-      message: `Auto-refresh EES schedule (${start}→${end}) ${new Date().toISOString()}`,
+      message: `Auto-refresh EES schedule (${span}) ${new Date().toISOString()}`,
     });
 
-    res.status(200).json({ ok: true, techs, start, end, htmlLen: html.length, commit });
+    res.status(200).json({ ok: true, totalTechs, span, htmlLen: html.length, commit });
   } catch (err) {
     console.error(err);
     res.status(500).json({ ok: false, error: String(err.message || err) });
