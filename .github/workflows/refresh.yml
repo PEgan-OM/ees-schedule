@@ -1,0 +1,46 @@
+name: Refresh EES Schedule
+
+# Runs on a timer and on demand. The schedule keeps the published page current;
+# the "Run workflow" button (workflow_dispatch) gives an instant manual refresh.
+on:
+  schedule:
+    - cron: '*/10 * * * *'   # every 10 minutes (GitHub may delay during load)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write             # allows committing index.html with the built-in token
+
+concurrency:
+  group: refresh-schedule
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build index.html from Simpro
+        env:
+          SIMPRO_CLIENT_ID: ${{ secrets.SIMPRO_CLIENT_ID }}
+          SIMPRO_CLIENT_SECRET: ${{ secrets.SIMPRO_CLIENT_SECRET }}
+          SIMPRO_USERNAME: ${{ secrets.SIMPRO_USERNAME }}
+          SIMPRO_PASSWORD: ${{ secrets.SIMPRO_PASSWORD }}
+        run: node refresh.js
+
+      - name: Commit if changed
+        run: |
+          if [[ -n "$(git status --porcelain index.html)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add index.html
+            git commit -m "Auto-refresh EES schedule $(date -u +%FT%TZ)"
+            git push
+            echo "Committed updated schedule."
+          else
+            echo "No change — schedule already current."
+          fi
