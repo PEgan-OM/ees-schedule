@@ -36,19 +36,24 @@ async function getToken() {
   return d.access_token;
 }
 
+// Sunday → Saturday week, mirroring how Simpro displays the schedule.
 function weekRange(ref = new Date()) {
   const d = new Date(ref);
-  const day = (d.getUTCDay() + 6) % 7;
-  const mon = new Date(d); mon.setUTCDate(d.getUTCDate() - day);
-  const sun = new Date(mon); sun.setUTCDate(mon.getUTCDate() + 6);
+  const day = d.getUTCDay(); // 0 = Sunday
+  const sun = new Date(d); sun.setUTCDate(d.getUTCDate() - day);
+  const sat = new Date(sun); sat.setUTCDate(sun.getUTCDate() + 6);
   const iso = (x) => x.toISOString().slice(0, 10);
-  return { start: iso(mon), end: iso(sun) };
+  return { start: iso(sun), end: iso(sat) };
 }
 
 // "2026-06-03" -> "Wed, Jun 3" — matches lib/buildHtml.js fmtDate so the
 // backup push renders identical day-of-week headers to the webhook push.
+// Regex-extract the date portion so any YYYY-MM-DD[...] shape still yields a
+// weekday name (prevents the day-of-week header from collapsing to a bare date).
 function fmtDate(iso) {
-  const d = new Date(iso + 'T00:00:00Z');
+  const m = /(\d{4})-(\d{2})-(\d{2})/.exec(String(iso));
+  if (!m) return iso;
+  const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
   if (isNaN(d)) return iso;
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const mon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
